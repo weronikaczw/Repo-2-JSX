@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic document settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+
+    <!-- Font loading: "preconnect" speeds up the first font request -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter font family (weights 400–700) used across the page -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Shared styling for layout + cards + buttons -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Small fixed label used for demos/debugging -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Page content: pricing cards grid/row -->
     <div class="cards-container">
+
+        <!-- Card: Hobby plan -->
         <div class="card">
+            <!-- Top content (title/price/features). Button sits at the bottom. -->
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
+                <!-- Price line: amount + optional "/mo." period -->
                 <p class="card-price">
                     <span class="card-price-amount">Free</span>
                 </p>
                 <div class="card-content">
                     <p class="includes-text">Includes:</p>
+                    <!-- Feature list: each row is "✓ + text" -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -36,17 +50,23 @@
                     </ul>
                 </div>
             </div>
+            <!-- CTA button (secondary style) -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Card: Pro plan -->
         <div class="card">
+            <!-- Top content (title/price/features). Button sits at the bottom. -->
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
+                <!-- Price line: amount + period (styled separately) -->
                 <p class="card-price">
                     <span class="card-price-amount">$20</span>
                     <span class="card-price-period">/mo.</span>
                 </p>
                 <div class="card-content">
                     <p class="includes-text">Everything in Hobby, plus:</p>
+                    <!-- Feature list: each row is "✓ + text" -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -67,8 +87,35 @@
                     </ul>
                 </div>
             </div>
+            <!-- CTA button (primary style) -->
             <button class="download-button primary">Get Pro</button>
         </div>
+        <!-- Card: Enterprise plan -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">Custom</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Custom SSO/SAML
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Dedicated support
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Security reviews
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <button class="download-button secondary">Contact sales</button>
     </div>
 </body>
 </html>
